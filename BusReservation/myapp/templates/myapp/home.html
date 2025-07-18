@@ -1,0 +1,31 @@
+{% extends 'myapp/base.html' %} 
+{% load static %}
+
+
+{% block extra_styles %}
+<style>
+    html, body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+    body {
+        background-image: url("{% static 'mysite/images/ateneobus.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="card bg-primary bg-opacity-80">
+        <div class="card-body">
+            <h2 class="my-3 text-center text-light">Welcome to Blue Eagle P2P Bus Reservation</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
